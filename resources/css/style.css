@@ -23,11 +23,29 @@ html {
 
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 /* ------------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ------------------------------------------------- */
 
+.progress-container {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    /* height: 10px; */
+    width: 100%;
+    bottom: 0px;
+    position: sticky;
+}
+
+.progress-bar {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,52,1) 0%, rgba(255,0,52,0.9472163865546218) 65%);   
+    height: 10px;
+    width: 0%;
+    border-radius: 0px 10px 5px 0px;
+  }
 
 .row {
     max-width: 80%;
@@ -36,6 +54,7 @@ html {
 /* --------section--------- */
 section {
     padding: 80px 0;
+    
 }
 
 .box {
@@ -93,7 +112,6 @@ h2:after {
 /* --------BUTTON--------- */
 .btn:link,
 .btn:visited {
-    /* background-image: linear-gradient(to top right, rgba(204, 174, 174, 0.486), rgba(182, 185, 182, 0.61)), url(); */
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -138,7 +156,7 @@ h2:after {
 /* ------------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;

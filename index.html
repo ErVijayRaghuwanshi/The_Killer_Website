@@ -4,11 +4,10 @@
 <head>
     <!-- 7 Useful HTML Code Snippets to HTML Improvements -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport -->
-    <!-- <meta name="theme-color" content="#141318" /> Theme coloour -->
-    <meta name="theme-color" content="#fff" /> Theme coloour
+    <meta name="theme-color" content="#fff" />
     <meta charset="UTF-8"> <!-- Charset -->
     <link rel="shortcut icon" href="resources/img/logo-white.png" type="image/x-icon">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Omnifood</title>
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
@@ -21,7 +20,7 @@
 
 <body>
     <header>
-        
+
         <div class="hero-text-box">
             <h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
             <a class="btn btn-full" href="#">I'm hungry</a>
@@ -37,41 +36,65 @@
             </ul>
         </div>
     </header>
-    
+
     <!-- section -->
     <section class="section-features">
         <div class="row">
             <h2>Get foot fast &mdash; note fast food</h2>
-            <p class="long-copy">Hello, we're Omnifood, your new permium food delivery. We know you're always busy. No time for cooking. So let us take caar of that, we're really goot at it, we promise!</p>
+            <p class="long-copy">Hello, we're Omnifood, your new permium food delivery. We know you're always busy. No
+                time for cooking. So let us take caar of that, we're really goot at it, we promise!</p>
         </div>
-        
+
         <div class="row">
-            
+
             <div class="col span-1-of-4 box">
                 <i class="fas fa-infinity"></i>
                 <h3>Up to 365 days/year</h3>
-                <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style</p>
+                <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage.
+                    You can also choose to order more flexibly if that's your style</p>
             </div>
             <div class="col span-1-of-4 box">
                 <i class="fas fa-clock"></i>
                 <h3>Ready in 20 minutes</h3>
-                <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
+                <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your
+                    home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
             </div>
             <div class="col span-1-of-4 box">
                 <i class="fas fa-carrot"></i>
                 <h3>100% organic</h3>
-                    <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
-                </div>
-                
+                <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
+                    antibiotics. Good for your health, the environment, and it also tastes better!</p>
+            </div>
+
             <div class="col span-1-of-4 box">
                 <i class="fas fa-cart-arrow-down"></i>
                 <h3>Order anything</h3>
-                <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
+                <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose
+                    from our menu containing over 100 delicious meals. It's up to you!</p>
             </div>
         </div>
     </section>
     <!-- section -->
-    
+
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <script>
+        function progressBarScroll() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+                scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        window.onscroll = function () {
+            progressBarScroll();
+        };
+    </script>
+    <!-- Scroll Progress Bar -->
+
     <!-- external JavaScript -->
     <script src="resources/js/script.js"></script>
     <!-- external JavaScript -->
