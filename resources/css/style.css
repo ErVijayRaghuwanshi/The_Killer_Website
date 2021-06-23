@@ -14,6 +14,7 @@
 
 
 html {
+    scroll-behavior: smooth;
     background-color: #fff;
     color: #555;
     font-family: lato, Arial, sans-serif;
@@ -25,27 +26,43 @@ html {
 
 body::-webkit-scrollbar {
     display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 
 /* ------------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ------------------------------------------------- */
 
+/* Typing Effect */
+.type,
+.banner-area {
+    color: white;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Typing Effect */
+
+
 .progress-container {
-    /* background-color: rgba(0, 0, 0, 0.6); */
-    /* height: 10px; */
+
+    background-color: rgba(0, 0, 0, 0.062);
     width: 100%;
-    bottom: 0px;
-    position: sticky;
+    top: 0px;
+    position: fixed;
 }
 
 .progress-bar {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,52,1) 0%, rgba(255,0,52,0.9472163865546218) 65%);   
-    height: 10px;
+    position: absolute;
+    background: rgb(255, 0, 0);
+    /* background: linear-gradient(30deg, rgb(26, 16, 212) 0%, rgba(255,0,52,1) 0%, rgb(214, 39, 74) 100%);    */
+    height: 5px;
     width: 0%;
     border-radius: 0px 10px 5px 0px;
   }
+
 
 .row {
     max-width: 80%;

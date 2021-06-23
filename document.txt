@@ -1,37 +1,50 @@
+---------------- Food Tagline ----------------
+The only thing we're serious about is food.
+Rain or Shine, It's time to dine.
+Hasty and Tasty
+Oh yeash!
+They're magically delicious
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <!-- 7 Useful HTML Code Snippets to HTML Improvements -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport -->
-        <meta name="theme-color" content="#fff" />
-        <meta charset="UTF-8"> <!-- Charset -->
-        <link rel="shortcut icon" href="resources/img/logo-white.png" type="image/x-icon">
-        
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Omnifood</title>
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link rel="stylesheet" href="vendors/css/grid.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/f59c85bf06.js" crossorigin="anonymous"></script>
-    </head>
-    
-    <body>
-        <header>
-            
-            <!-- main content -->
+
+<head>
+    <!-- 7 Useful HTML Code Snippets to HTML Improvements -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport -->
+    <meta name="theme-color" content="#fff" />
+    <meta charset="UTF-8"> <!-- Charset -->
+    <link rel="shortcut icon" href="resources/img/logo-white.png" type="image/x-icon">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Omnifood</title>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f59c85bf06.js" crossorigin="anonymous"></script>
+</head>
+
+<body onmouseover="typeWriter()">
+    <header>
+
+        <!-- main content -->
         <div class="hero-text-box">
-            <!-- Typing Effect -->
-            <div class="banner-area">
-                <h1><span class="type"></span></h1>
-            </div>
-            <!-- Typing Effect -->
-            <!-- <h1>Goodbye junk food.<br> Hello super healthy meals.</h1> -->
+            <h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
             <a class="btn btn-full" href="#">I'm hungry</a>
             <a class="btn btn-ghost" href="#">Show me more</a>
-            
+
+            <!-- Typing Effect -->
+            <div class="container py-5">
+                <div class="output" id="output">
+                    <h1 class="cursor"></h1>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Typing Effect -->
 
         </div>
         <div class="row">
@@ -44,7 +57,7 @@
             </ul>
         </div>
     </header>
-    
+
     <!-- section -->
     <section class="section-features">
         <div class="row">
@@ -72,37 +85,19 @@
                 <h3>100% organic</h3>
                 <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
                     antibiotics. Good for your health, the environment, and it also tastes better!</p>
-                </div>
+            </div>
 
-                <div class="col span-1-of-4 box">
+            <div class="col span-1-of-4 box">
                 <i class="fas fa-cart-arrow-down"></i>
                 <h3>Order anything</h3>
                 <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose
                     from our menu containing over 100 delicious meals. It's up to you!</p>
-                </div>
             </div>
+        </div>
     </section>
     <!-- section -->
-    
 
-    
-    <!-- external JavaScript -->
-    <script src="resources/js/script.js"></script>
-    <script src="vendors/js/typed.js"></script>
-    <script>
-        var typed = new Typed('.type', {
-  strings: [
-      "Hello Goodbye junk food.",
-      "Hello super healthy meals."
-    ],
-  typeSpeed: 60,
-  backSpeed: 30,
-  smartBackspace: true,
-  loop: true
-});
-    </script>
-    <!-- external JavaScript -->
-    
+
     <!-- Scroll Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -114,12 +109,16 @@
                 scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
         }
-    
+
         window.onscroll = function () {
             progressBarScroll();
         };
     </script>
     <!-- Scroll Progress Bar -->
+
+    <!-- external JavaScript -->
+    <script src="resources/js/script.js"></script>
+    <!-- external JavaScript -->
 </body>
 
 </html>
